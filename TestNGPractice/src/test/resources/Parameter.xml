@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ParameterPractice">
+	<parameter name="browserName" value="Chrome" />
+	<parameter name="url" value="http://tek-school.com/retail/" />
+	<parameter name="userName" value="tiger420@gmail.com" />
+	<parameter name="password" value="tiger420" />
+	<test name="Test1">
+		<classes>
+			<class name="testNG.Parameters">
+				<methods>
+					<include name="lounchBrowser" />
+					<include name="launchApp" />
+					<include name="enterLoginDetails" />
+					<include name="verifyLogin" />
+					<include name="verifLoginPage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+		<test name="TestFacebook">
+		<classes>
+			<class name="testNG.Parameter2">
+				<methods>
+				<include name = "testFaceBook"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="TestGoogle" enabled ="false"> <!enebaled and disabled>
+		<classes>
+			<class name="testNG.Parameter2">
+				<methods>
+					<include name="testGoogle" />
+					<exclude name = "signIn"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
